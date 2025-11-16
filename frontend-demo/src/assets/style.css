@@ -1,0 +1,239 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 登录页面样式 */
+.login-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-title h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-title p {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 主布局样式 */
+.layout-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  height: 60px;
+  background: #409eff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-title {
+  font-size: 18px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.layout-sidebar {
+  width: 220px;
+  background: #f0f2f5;
+  border-right: 1px solid #e4e7ed;
+  overflow-y: auto;
+}
+
+.layout-content {
+  flex: 1;
+  background: #f5f7fa;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* 页面内容样式 */
+.page-container {
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 100%;
+}
+
+.page-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e4e7ed;
+}
+
+.page-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.page-description {
+  font-size: 13px;
+  color: #999;
+}
+
+/* 查询表单样式 */
+.query-form {
+  background: #f9fafc;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* 表格操作按钮 */
+.table-actions {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 状态标签 */
+.status-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.status-success {
+  background: #f0f9ff;
+  color: #67c23a;
+}
+
+.status-warning {
+  background: #fef0f0;
+  color: #f56c6c;
+}
+
+.status-info {
+  background: #f4f4f5;
+  color: #909399;
+}
+
+/* 编辑器布局 */
+.editor-container {
+  display: flex;
+  height: calc(100vh - 160px);
+  gap: 10px;
+}
+
+.editor-sidebar {
+  width: 20%;
+  background: white;
+  border-radius: 4px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.editor-main {
+  width: 55%;
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.editor-assistant {
+  width: 25%;
+  background: white;
+  border-radius: 4px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* 工具栏 */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e4e7ed;
+  margin-bottom: 15px;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .layout-sidebar {
+    width: 180px;
+  }
+  
+  .editor-sidebar {
+    width: 25%;
+  }
+  
+  .editor-main {
+    width: 50%;
+  }
+  
+  .editor-assistant {
+    width: 25%;
+  }
+}
+

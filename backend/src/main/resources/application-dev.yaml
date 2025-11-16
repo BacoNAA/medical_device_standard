@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/medical_device_standards?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456  # ⚠️ 请修改为您的MySQL密码
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+# JWT配置
+jwt:
+  secret: medical-standard-secret-key-2024-very-long-secret-for-jwt-token
+  expiration: 86400000  # 24小时（毫秒）
+
+# 文件存储路径
+file:
+  upload-path: D:/medical-standard-files/uploads/
+  export-path: D:/medical-standard-files/exports/
+

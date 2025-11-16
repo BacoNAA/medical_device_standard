@@ -1,0 +1,3 @@
+# Controller层 - REST API控制器
+# 负责接收HTTP请求，调用Service层处理业务逻辑，返回响应结果
+

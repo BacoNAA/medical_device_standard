@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/medical_standard_db?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Shanghai
+    username: medical_user
+    password: ${DB_PASSWORD}  # 使用环境变量
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 50
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+# JWT配置
+jwt:
+  secret: ${JWT_SECRET}  # 使用环境变量，生产环境必须修改
+  expiration: 86400000  # 24小时（毫秒）
+
+# 文件存储路径
+file:
+  upload-path: /data/medical-standard/uploads/
+  export-path: /data/medical-standard/exports/
+
+# 日志配置（生产环境）
+logging:
+  level:
+    com.medical.standard: info
+    com.medical.standard.mapper: warn
+  file:
+    name: /var/log/medical-standard/application.log
+    max-size: 100MB
+    max-history: 30
+
